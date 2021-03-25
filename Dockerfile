@@ -1,6 +1,6 @@
 FROM centos:latest
 
-RUN apt-get install httpd zip unzip -y
+RUN yum install httpd zip unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page247/kindle.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip kindle.zip
