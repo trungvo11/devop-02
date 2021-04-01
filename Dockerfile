@@ -2,10 +2,10 @@ FROM centos:latest
 
 RUN yum install httpd zip unzip -y
 # ADD https://www.free-css.com/assets/files/free-css-templates/download/page247/kindle.zip /var/www/html/
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page265/character.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page265/shree.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip character.zip
-RUN cp -rvf 2110_character/* .
+RUN unzip shree.zip
+RUN cp -rvf shree/* .
 # RUN rm -rf __MACOSX markups-kindle kindle.zip
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
 EXPOSE 80
